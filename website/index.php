@@ -8,7 +8,7 @@ session_start();
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Episode 2013</title>
+    <title>Episode 2015</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -16,9 +16,50 @@ session_start();
     <!-- Le styles -->
     <link href="../assets/css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
+     [data-tip] {
+        position:relative;
+     }
+     [data-tip]:before {
+     content:'';
+     /* hides the tooltip when not hovered */
+     display:none;
+     content:'';
+     border-left: 5px solid transparent;
+     border-right: 5px solid transparent;
+     border-bottom: 5px solid #1a1a1a; 
+     position:absolute;
+     top:30px;
+     left:35px;
+     z-index:8;
+     font-size:0;
+     line-height:0;
+     width:0;
+     height:0;
+     }
+     [data-tip]:after {
+     display:none;
+     content:attr(data-tip);
+     position:absolute;
+     top:35px;
+     left:0px;
+     padding:5px 8px;
+     background:#1a1a1a;
+     color:#fff;
+     z-index:9;
+     font-size: 0.75em;
+     height:18px;
+     line-height:18px;
+     -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+     border-radius: 3px;
+     white-space:nowrap;
+     word-wrap:normal;
+     }
+      [data-tip]:hover:before,
+      [data-tip]:hover:after {
+      display:block;
+      }
       body {
-        padding-top: 60px;
-        padding-bottom: 40px;
       }
       footer {
         text-align: center;
@@ -65,7 +106,7 @@ session_start();
           </button>
           <a class="brand" href="#">
           <?php if (!isset($_SESSION['uname'])) { ?>
-          Episode 2013
+          Episode 2015
           <?php } else { echo $_SESSION['uname']; }
           ?>
           </a>
@@ -74,14 +115,14 @@ session_start();
               <li class="active"><a href="#">Home</a></li>
               <li><a href="profile.php">Profile</a></li>
               <li><a href="testimonial.php">Testimonials</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <!--<li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>-->
             </ul>
             <?php if(!isset($_SESSION['uname'])) { ?>
-            <form class="navbar-form pull-right" method="POST" action="login.php">
-              <input class="span2" name="rollnumber" type="text" placeholder="Roll Number">
-              <input class="span2" name="password" type="password" placeholder="Password">
-              <button type="submit" class="btn" name="signin">Sign in</button>
+            <form class="navbar-form " method="POST" action="login.php">
+              <div style="float:right;"><button type="submit" class="btn" name="signin">Sign in</button></div>
+              <div data-tip="Initial Password is the same as the Username." style="float:right; padding-right: 10px;"><input class="span2" name="password" type="password" placeholder="Password"></div>
+              <div data-tip="Format: 11/CSE/67 OR 11/CSE/5" style="float:right; padding-right: 10px;"><input class="span2" name="rollnumber" type="text" placeholder="Roll Number"></div>
             </form>
             <?php } else {
             ?>
@@ -92,26 +133,27 @@ session_start();
       </div>
     </div>
 
-    <div class="container">
+    <div style="width: 100%; height: 100%; background-image: url('../assets/img/swirl_pattern.png'); background-repeat: repeat-x repeat-y;">
+    <div class="container" style="padding-top:80px;">
 
       <!-- Main hero unit for a primary marketing message or call to action -->
-      <div class="well">
-        <h1>Episode 2013</h1>
+      <div class="well" style="border-radius: 10px; background-image: url('../assets/img/escheresque_ste.png'); background-repeat: repeat-x repeat-y;">
+        <h1 style="color: #E5E6EB">Episode 2015</h1>
         <div id="video">
             <iframe width="560" height="315" src="http://www.youtube.com/embed/Rw9wtaPd-F0" frameborder="0" allowfullscreen></iframe>
         </div>
-        <div id="poem">
-            <em>The story of life is quicker than the wink of an eye,<br/>the story of love is hello and goodbye...<br/>until we meet again</em>
+        <div id="poem" style="color: #E5E6EB">
+            <b>The story of life is quicker than the wink of an eye,<br/>the story of love is hello and goodbye...<br/>until we meet again</b>
         </div>
       </div>
 
-      <hr>
 
       <footer>
-        <p>An initiative by Literary Circle and GLUG, NIT Durgapur</p>
+        <p>An initiative by <a href="http://nitdgplug.org"><b>GNU/Linux Users' Group</b></a> and <b>Literary Circle</b>, NIT Durgapur</p>
       </footer>
 
     </div> <!-- /container -->
+  </div>
 
     <!-- Le javascript
     ================================================== -->

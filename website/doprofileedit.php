@@ -42,7 +42,7 @@ else
         $groupfilename = str_replace('/', '', $uname) . "." . $groupextension;
         $groupfilename = str_replace('/', '', $uname) . "." . $groupextension;
         echo $_FILES["groupPhoto"]["tmp_name"] . " to ";
-        echo "groupphotos/" . $groupfilename;
+        echo "groupphotos/" . $groupfilename . "<br>";
         move_uploaded_file($_FILES["groupPhoto"]["tmp_name"],
         "groupphotos/" . $groupfilename);
     }

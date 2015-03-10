@@ -11,7 +11,7 @@ foreach ($arr as $dept) {
         $limit = 200;
 
     for ($i = 1; $i < $limit; $i++) {
-        $roll = '09/' . $dept . '/' . $i;
+        $roll = '11/' . $dept . '/' . $i;
         $q = "INSERT INTO profiles (`uname`, `password`) VALUES ('$roll', '$roll')";
         mysql_query($q);
     }

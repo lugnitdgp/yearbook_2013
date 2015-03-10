@@ -19,7 +19,7 @@ else
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Episode 2013 - Request Testimonial</title>
+    <title>Episode 2015 - Request Testimonial</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -145,7 +145,7 @@ else
 
       <hr/>
       <footer>
-        <p>An initiative by Literary Circle and GLUG, NIT Durgapur</p>
+        <p>An initiative by <a href="http://nitdgplug,org"><b>GNU/Linux Users' Group</b></a> and <b>Literary Circle</b>, NIT Durgapur</p>
       </footer>
 
     </div> <!-- /container -->

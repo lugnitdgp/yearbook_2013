@@ -192,8 +192,8 @@ else
               <li><a href="index.php">Home</a></li>
               <li class="active"><a href="profile.php">Profile</a></li>
               <li><a href="testimonial.php">Testimonials</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <!--<li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>-->
             </ul>
             <a href="logout.php" class="btn pull-right">Sign out</a>
           </div><!--/.nav-collapse -->
@@ -306,7 +306,7 @@ else
       <hr>
 
       <footer>
-        <p>An initiative by Literary Circle and GLUG, NIT Durgapur</p>
+        <p>An initiative by <a href="http://nitdgplug,org"><b>GNU/Linux Users' Group</b></a> and <b>Literary Circle</b>, NIT Durgapur</p>
       </footer>
 
     </div> <!-- /container -->
